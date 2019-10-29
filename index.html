@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid wrapper" >
+      <div class="home_wrapper main_box" style="display: block">
+        <div class="title_section">
+          <span>Select play mode</span>
+        </div>
+        <div class="button_wrapper">
+          <div class="button_row"><button class="btn btn-success" onclick=startGame(0)>Player VS Computer</button></div>
+          <div class="button_row"><button class="btn btn-success" onclick=startGame(1) disabled>Player1 VS Player2</button></div>
+        </div>
+      </div>
+      <div class="action_wrapper main_box" style="display: none">
+          <div class="player1_area play_space">
+            <span>Computer is playing...</span>
+            <div class="options_holder">
+                <div class="rock_option" >
+   
+                </div>
+                <div class="scissor_option">
+   
+                </div>
+                <div class="paper_option" >
+   
+                </div>
+             </div>
+          </div>
+          <hr>
+          <div class="player2_area play_space">
+            <span>You</span>
+            <div><span>Choose your move!</span></div>
+            <div class="options_holder">
+             <div class="rock_option" onclick="selectOption(0);">
+
+             </div>
+             <div class="scissor_option"  onclick=selectOption(1)>
+
+             </div>
+             <div class="paper_option" onclick=selectOption(2)>
+
+             </div>
+          </div>
+
+          </div>
+      </div>
+      <div class="result_wrapper main_box" style="display: none">
+        <div class="player_title"><span>Computer Selected</span></div>
+        <div class="player1_selection">
+           
+            <div class="option_chosen p1"></div>
+        </div>
+        <hr>
+        <div class="result_box">
+          <span></span>
+          <div class="btn_holder">
+            <button class="btn btn-danger" onclick=playAgain()>Play Again</button>
+          </div>
+        </div>
+        <hr>
+        <div class="player_title"><span>You Selected</span></div>
+
+        <div class="player2_selection ">
+            <div class="option_chosen p2"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
